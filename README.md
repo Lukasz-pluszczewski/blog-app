@@ -11,6 +11,18 @@ cd blog-app
 npm i
 ```
 
+#### Run development server
+```bash
+npm run dev
+```
+
+or
+
+#### Build the project
+```bash
+npm run build
+```
+
 #### Run the app
 ```bash
 npm start
