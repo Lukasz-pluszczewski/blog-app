@@ -2,7 +2,7 @@
 
 #### Clone the project
 ```bash
-git clone https://github.com/Lukasz-pluszczewski/blog-app
+git clone git@github.com:Lukasz-pluszczewski/blog-app.git
 cd blog-app
 ```
 
