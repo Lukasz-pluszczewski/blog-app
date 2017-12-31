@@ -1,0 +1,14 @@
+@import "../variables";
+
+.ComponentsPage {
+  @extend .basePage;
+
+  .ComponentsPage__buttonSection {
+    .Section__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 300px;
+    }
+  }
+}

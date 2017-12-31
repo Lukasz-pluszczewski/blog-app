@@ -1,0 +1,28 @@
+@import "../variables";
+
+.Section {
+  position: relative;
+  .Section__title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: $largeSpacing 0 $smallSpacing 0;
+  }
+  .Section__description {
+    margin: $smallSpacing 0 $largeSpacing 0;
+  }
+  .Section__content {
+    margin-bottom: $standardSpacing;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $grey;
+    margin-bottom: $standardSpacing;
+  }
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "../variables";
+
+.Link {
+  color: $baseFontColor;
+  text-decoration: none;
+  &:visited {
+    color: $baseFontColor;
+  }
+}

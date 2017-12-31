@@ -1,0 +1,12 @@
+@import "../variables";
+
+.PostsListPage {
+  @extend .basePage;
+  .PostsListPage__header {
+    display: flex;
+    align-items: center;
+    .PostsListPage__addNewButton {
+      margin-left: $standardSpacing;
+    }
+  }
+}

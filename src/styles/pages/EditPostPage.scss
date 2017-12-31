@@ -1,0 +1,11 @@
+@import "../variables";
+
+.EditPostPage {
+  @extend .fullWidthPage;
+  .EditPostPage__form {
+    padding: $smallSpacing;
+  }
+  .EditPostPage__preview {
+    padding: $smallSpacing;
+  }
+}

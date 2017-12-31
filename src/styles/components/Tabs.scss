@@ -1,0 +1,32 @@
+@import "../variables";
+
+$normalButtonPaddingLeftRight: $standardSpacing;
+$normalButtonPaddingTopBottom: $smallSpacing;
+
+.Tabs {
+  .Tabs__tabs {
+    .Tabs__backIcon {
+      margin: 0 $standardSpacing;
+    }
+    .Tabs__tab {
+      display: inline-block;
+      position: relative;
+      border: none;
+      background: $darkGrey;
+      color: $disabledText;
+      text-align: center;
+      padding: $normalButtonPaddingTopBottom $normalButtonPaddingLeftRight;
+      cursor: pointer;
+      &.Tabs__tab--active {
+        background: $primary;
+        color: $lightText;
+      }
+    }
+  }
+  .Tabs__content {
+    display: none;
+    &.Tabs__content--active {
+      display: block;
+    }
+  }
+}

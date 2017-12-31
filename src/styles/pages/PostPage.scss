@@ -1,0 +1,20 @@
+@import "../variables";
+
+.PostPage {
+  @extend .basePage;
+  .PostPage__header {
+    display: flex;
+    align-items: center;
+    .PostPage__backLink {
+      margin-right: $standardSpacing;
+    }
+    .PostPage__title {
+      display: inline-block;
+      margin: 0;
+    }
+    .PostPage__editIcon {
+      cursor: pointer;
+      margin-left: $standardSpacing;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import "../variables";
+
+.ProgressBar {
+  position: relative;
+  height: 1em;
+  border: 1px solid $primary;
+  .ProgressBar__bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: $grey;
+  }
+  .ProgressBar__steps {
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}

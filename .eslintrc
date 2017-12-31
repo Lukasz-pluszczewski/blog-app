@@ -1,0 +1,17 @@
+{
+  "root": true,
+  "extends": [
+    "brainhub"
+  ],
+  "rules": {
+    "no-invalid-this": 0
+  },
+  "globals": {
+
+  },
+  "settings": {
+    "import/resolve": {
+      "moduleDirectory": ["node_modules", "src", "lib"]
+    }
+  },
+}

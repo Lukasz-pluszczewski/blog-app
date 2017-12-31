@@ -1,0 +1,29 @@
+@import "../variables";
+
+.Layout {
+  display: flex;
+  flex-direction: column;
+  .Layout__topbar {
+    display: flex;
+    justify-content: space-between;
+    .Layout__topbarLeft {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .Layout__topbarRight {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .Layout__logoutIcon {
+      margin: $standardSpacing;
+      cursor: pointer;
+    }
+  }
+  .Layout__content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: $standardSpacing;
+  }
+}

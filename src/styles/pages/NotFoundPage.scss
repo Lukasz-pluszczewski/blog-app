@@ -1,0 +1,15 @@
+@import "../variables";
+
+.NotFoundPage {
+  @extend .basePage;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .NotFoundPage__backLink {
+    margin-top: $largeSpacing;
+    .NotFoundPage__backIcon {
+      margin-right: $standardSpacing;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "../variables";
+
+.ButtonCheckbox {
+  .ButtonCheckbox__label {
+    display: block;
+    margin-bottom: $tinySpacing;
+  }
+  .ButtonCheckbox__buttons {
+    display: flex;
+    margin: 0 (-$smallSpacing);
+    .ButtonCheckbox__Button {
+      margin: 0 $smallSpacing;
+      background: $grey;
+      &.ButtonCheckbox__Button--selected {
+        background: $primary;
+      }
+    }
+  }
+  .ButtonCheckbox__error {
+    height: $standardSpacing;
+    color: $errorColor;
+    ul {
+      li {
+
+      }
+    }
+  }
+  &.ButtonCheckbox--fullWidth {
+    .ButtonCheckbox__buttons {
+      .ButtonCheckbox__Button {
+        flex-grow: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../variables";
+
+.Post {
+  .Post__tags {
+    display: flex;
+    margin: $smallSpacing 0;
+    .Post__tag {
+      background-color: $accent;
+      padding: $tinySpacing $smallSpacing;
+      border-radius: $standardSpacing;
+      margin: 0 $tinySpacing;
+      font-size: 0.75em;
+    }
+  }
+  .Post__description {
+    font-style: italic;
+  }
+}

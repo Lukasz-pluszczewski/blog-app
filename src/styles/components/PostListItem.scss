@@ -1,0 +1,14 @@
+@import "../variables";
+
+.PostListItem {
+  .PostListItem__header {
+    .PostListItem__title {
+      display: inline-block;
+      margin: 0;
+    }
+    .PostListItem__removeButton {
+      cursor: pointer;
+      margin-left: $standardSpacing;
+    }
+  }
+}
