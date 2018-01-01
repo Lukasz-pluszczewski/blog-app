@@ -29,10 +29,10 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development'),
-      'process.env.API_PROTOCOL': process.env.API_PROTOCOL,
-      'process.env.API_HOST': process.env.API_HOST,
-      'process.env.API_PORT': process.env.API_PORT,
-      'process.env.API_VERSION': process.env.API_VERSION,
+      'process.env.API_PROTOCOL': JSON.stringify(process.env.API_PROTOCOL),
+      'process.env.API_HOST': JSON.stringify(process.env.API_HOST),
+      'process.env.API_PORT': JSON.stringify(process.env.API_PORT),
+      'process.env.API_VERSION': JSON.stringify(process.env.API_VERSION),
       __DEV__: true,
     }),
     new webpack.HotModuleReplacementPlugin(),
