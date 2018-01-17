@@ -5,9 +5,12 @@ import { Provider } from 'react-redux';
 import routes from './routes';
 import configureStore from './store/configureStore';
 
+import initDebug from 'services/debug';
+
 import './favicon.ico';
 import './styles/styles.scss';
 
+initDebug();
 const store = configureStore();
 
 render(

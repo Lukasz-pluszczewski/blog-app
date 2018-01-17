@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 
+import formBackup from 'services/formBackup';
+
 import ReduxFormCodeMirror from 'components/ReduxFormCodeMirror';
 import ReduxFormInput from 'components/ReduxFormInput';
 import ReduxFormButtonCheckbox from 'components/ReduxFormButtonCheckbox';
@@ -17,7 +19,7 @@ class NewPostForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.handleSubmit();
-  }
+  };
 
   render() {
     return (
@@ -63,4 +65,5 @@ class NewPostForm extends Component {
 
 export default reduxForm({
   form: 'newPost',
+  onChange: values => formBackup.add('newPost', values),
 })(NewPostForm);

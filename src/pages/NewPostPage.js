@@ -16,15 +16,18 @@ class NewPostPage extends Component {
   static propTypes = {
     content: PropTypes.string,
     title: PropTypes.string,
+    description: PropTypes.string,
+    tags: PropTypes.string,
     addPost: PropTypes.func,
     getPosts: PropTypes.func,
   };
 
   handleSubmit = () => {
-    console.log('submitting');
     this.props.addPost(
       {
         title: this.props.title,
+        description: this.props.description,
+        tags: this.props.tags.split(' '),
         content: this.props.content,
       },
       {
@@ -34,7 +37,7 @@ class NewPostPage extends Component {
         },
       }
     );
-  }
+  };
 
   render() {
     return (
@@ -67,6 +70,8 @@ class NewPostPage extends Component {
 export default connect(
   state => ({
     title: _.get(state, 'form.newPost.values.title', ''),
+    tags: _.get(state, 'form.newPost.values.tags', ''),
+    description: _.get(state, 'form.newPost.values.description', ''),
     content: _.get(state, 'form.newPost.values.content', ''),
   }),
   {

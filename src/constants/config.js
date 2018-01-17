@@ -9,4 +9,8 @@ export default {
     header: 'jwt',
     storageFieldName: 'auth',
   },
+  formBackup: {
+    backupName: 'philosophyBlog',
+    numberOfCopies: 10,
+  },
 };

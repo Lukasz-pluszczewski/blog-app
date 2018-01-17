@@ -41,28 +41,31 @@ class Post extends Component {
   render() {
     const { post, hideTitle, hideTags, hideDescription, hideContent } = this.props;
 
-    return (
-      <div className="Post">
-        {hideTitle || (
-          <div className="Post__title">
-            <h1>
-              {post && post.title}
-            </h1>
-          </div>
-        )}
-        {hideTags || this.getTags()}
-        {hideDescription || (
-          <div className="Post__description">
-            {post && post.description}
-          </div>
-        )}
-        {hideContent || (
-          <div className="Post__content">
-            <Markdown source={post && post.content}/>
-          </div>
-        )}
-      </div>
-    );
+    if (post) {
+      return (
+        <div className="Post">
+          {hideTitle || (
+            <div className="Post__title">
+              <h1>
+                {post && post.title}
+              </h1>
+            </div>
+          )}
+          {hideTags || this.getTags()}
+          {hideDescription || (
+            <div className="Post__description">
+              {post && post.description}
+            </div>
+          )}
+          {hideContent || (
+            <div className="Post__content">
+              <Markdown source={post && post.content}/>
+            </div>
+          )}
+        </div>
+      );
+    }
+    return null;
   }
 }
 

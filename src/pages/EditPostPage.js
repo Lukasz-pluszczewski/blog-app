@@ -35,10 +35,9 @@ class EditPostPage extends Component {
       { id: this.props.match.params.id },
       { error: ({ error }) => error.statusCode === 404 ? this.props.history.push('/notfound') : null }
     );
-  }
+  };
 
   handleSubmit = () => {
-    console.log('submitting');
     this.props.editPost(
       {
         id: this.props.match.params.id,
@@ -56,7 +55,7 @@ class EditPostPage extends Component {
         },
       }
     );
-  }
+  };
 
   render() {
     const { post, title, tags, description, content } = this.props;
@@ -64,7 +63,7 @@ class EditPostPage extends Component {
     return (
       <Layout>
         <div className="EditPostPage">
-          <Tabs
+          {post && (<Tabs
             back="/"
             tabs={[
               {
@@ -93,7 +92,7 @@ class EditPostPage extends Component {
                 </div>),
               },
             ]}
-          />
+          />)}
         </div>
       </Layout>
     );
