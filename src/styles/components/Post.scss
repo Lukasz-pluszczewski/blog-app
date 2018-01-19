@@ -42,6 +42,12 @@
     img {
       display: block;
       margin: 0 auto;
+      max-width: 100%;
+    }
+    blockquote {
+      border-left: 3px solid $lightGrey;
+      padding: 0 $smallSpacing;
+      margin: 0 $standardSpacing;
     }
   }
 }

@@ -40,7 +40,7 @@ class Layout extends Component {
           <div className="Layout__topbarRight">
             <div className="Layout__topbarItem">
               <div className="Layout__quote">
-                <pre className="Layout__quoteQuote">{`"${quote.quote}"`}</pre>
+                <div className="Layout__quoteQuote">{`"${quote.quote}"`}</div>
                 <span className="Layout__quoteAuthor">{quote.author}</span>
               </div>
             </div>
