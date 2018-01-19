@@ -20,6 +20,7 @@ class PostListItem extends Component {
       tags: PropTypes.arrayOf(PropTypes.string),
       description: PropTypes.string,
       content: PropTypes.string,
+      hidden: PropTypes.bool,
     }),
     deletePost: PropTypes.func,
     getPosts: PropTypes.func,
@@ -42,6 +43,12 @@ class PostListItem extends Component {
               name="trash"
               onClick={this.deletePost}
             />
+            {this.props.post.hidden
+              ? <Icon
+                className="PostListItem__hiddenIcon"
+                name="eye-slash"
+              />
+              : null}
           </IsLoggedIn>
         </div>
         <Post post={this.props.post} hideContent hideTitle />

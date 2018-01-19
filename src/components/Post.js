@@ -22,7 +22,8 @@ class Post extends Component {
     const { post } = this.props;
     if (post && post.tags) {
       const postArr = Array.isArray(post.tags) ? post.tags : post.tags.split(' ');
-      if (postArr.length) {
+
+      if (postArr.length && !(postArr.length === 1 && !postArr[0])) {
         return (
           <div className="Post__tags">
             <Icon className="Post__tagsIcon" name="tags" />
