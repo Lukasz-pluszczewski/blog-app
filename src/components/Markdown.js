@@ -8,7 +8,7 @@ import 'prismjs/themes/prism.css';
 function CodeBlock(props) {
   const html = Prism.highlight(props.literal, Prism.languages[props.language]);
   const cls = 'language-' + props.language;
-  console.log('prism', { html, literal });
+
   return (
     <pre className={cls}>
       <code
