@@ -20,30 +20,38 @@
       align-items: center;
       text-align: right;
     }
-
-    .Layout__logo {
-      display: flex;
-      align-items: center;
-      .Layout__logoImage {
-        width: 50px;
+    .Layout__topbarItem {
+      .Layout__logo {
+        display: flex;
+        align-items: center;
+        .Layout__logoImage {
+          width: 50px;
+          margin: $smallSpacing;
+        }
+      }
+      .Layout__quote {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: $standardSpacing;
+        font-size: 0.75em;
+        .Layout__quoteQuote {
+          margin-top: 0;
+          font-family: inherit;
+          font-style: italic;
+        }
+      }
+      .Layout__logoutIcon {
+        color: $white;
         margin: $smallSpacing;
+        cursor: pointer;
       }
-    }
-    .Layout__quote {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-left: $standardSpacing;
-      font-size: 0.75em;
-      .Layout__quoteQuote {
-        margin-top: 0;
-        font-family: inherit;
-        font-style: italic;
+      .Layout__configIcon {
+        color: $white;
+        margin: $smallSpacing;
+        margin-left: $standardSpacing;
+        cursor: pointer;
       }
-    }
-    .Layout__logoutIcon {
-      margin: $standardSpacing;
-      cursor: pointer;
     }
   }
   .Layout__content {

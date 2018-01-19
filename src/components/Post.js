@@ -57,12 +57,16 @@ class Post extends Component {
           )}
           <div className="Post__info">
             {hideTags || this.getTags()}
-            <div className="Post__dateContainer">
-              <Icon className="Post__dateIcon" name="clock-o"/>
-              <div className="Post__date">
-                { post && moment(post.date).format('DD-MM-YYYY') }
-              </div>
-            </div>
+            { post && post.date
+              ? (
+                <div className="Post__dateContainer">
+                  <Icon className="Post__dateIcon" name="clock-o"/>
+                  <div className="Post__date">
+                    { moment(post.date).format('DD-MM-YYYY') }
+                  </div>
+                </div>
+              )
+              : null}
           </div>
           {hideDescription || (
             <div className="Post__description">

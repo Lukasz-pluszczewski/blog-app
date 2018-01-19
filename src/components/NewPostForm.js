@@ -32,6 +32,13 @@ class NewPostForm extends Component {
           fullWidth
         />
         <Field
+          name="date"
+          component={ReduxFormInput}
+          type="number"
+          label="Date"
+          fullWidth
+        />
+        <Field
           name="tags"
           component={ReduxFormInput}
           type="text"

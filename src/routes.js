@@ -10,6 +10,7 @@ import PostPage from 'pages/PostPage';
 import EditPostPage from 'pages/EditPostPage';
 import NewPostPage from 'pages/NewPostPage';
 import LoginPage from 'pages/LoginPage';
+import ConfigPage from 'pages/ConfigPage';
 import ComponentsPage from 'pages/ComponentsPage';
 import NotFoundPage from 'pages/NotFoundPage';
 
@@ -21,6 +22,7 @@ export default (
         <Route exact path="/posts/:id/edit" component={EditPostPage}/>
         <Route exact path="/newpost" component={NewPostPage}/>
         <Route exact path="/login" component={LoginPage}/>
+        <Route exact path="/config" component={ConfigPage}/>
         <Route exact path="/components" component={ComponentsPage}/>
         <Route exact path="/" component={PostsListPage}/>
         <Route exact path="/:tag" component={PostsListPage}/>

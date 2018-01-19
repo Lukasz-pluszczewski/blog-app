@@ -17,6 +17,7 @@ class Layout extends Component {
     children: PropTypes.node,
     logout: PropTypes.func,
     getPosts: PropTypes.func,
+    config: PropTypes.objectOf(PropTypes.string),
   };
 
   logOut = () => {
@@ -25,6 +26,9 @@ class Layout extends Component {
   };
 
   render() {
+    const quote = this.props.config.Quote;
+    const quoteAuthor = this.props.config.QuoteAuthor;
+
     return (
       <div className="Layout">
         <div className="Layout__topbar">
@@ -39,10 +43,21 @@ class Layout extends Component {
           </div>
           <div className="Layout__topbarRight">
             <div className="Layout__topbarItem">
-              <div className="Layout__quote">
-                <div className="Layout__quoteQuote">{`"${quote.quote}"`}</div>
-                <span className="Layout__quoteAuthor">{quote.author}</span>
-              </div>
+              {quote
+                ? (
+                  <div className="Layout__quote">
+                    <div className="Layout__quoteQuote">{`"${quote}"`}</div>
+                    <span className="Layout__quoteAuthor">{quoteAuthor || 'Unknown'}</span>
+                  </div>
+                )
+                : null}
+            </div>
+            <div className="Layout__topbarItem">
+              <IsLoggedIn>
+                <Link to="/config">
+                  <Icon className="Layout__configIcon" name="cog"/>
+                </Link>
+              </IsLoggedIn>
             </div>
             <div className="Layout__topbarItem">
               <IsLoggedIn>
@@ -58,7 +73,9 @@ class Layout extends Component {
 }
 
 export default connect(
-  state => ({}),
+  state => ({
+    config: state.config.configValues,
+  }),
   {
     logout: getAction('logout'),
     getPosts: getAction('getPosts'),

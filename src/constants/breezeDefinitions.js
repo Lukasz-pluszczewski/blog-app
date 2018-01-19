@@ -1,3 +1,4 @@
+import { set, immutableDelete } from 'perfect-immutable';
 import apiClient from 'services/apiClient';
 import tokenService from 'services/tokenService';
 
@@ -50,6 +51,31 @@ const breezeDefinitions = {
       result: {
         authDetails: { source: 'result', default: {} },
       },
+    },
+  },
+  config: {
+    setConfigValue: {
+      type: 'default',
+      result: {
+        configValues: (action, currentValue) => set(currentValue, `${action.payload.field}`, action.payload.value),
+      },
+    },
+    deleteConfigValue: {
+      type: 'default',
+      result: {
+        configValues: (action, currentValue) => immutableDelete(currentValue, action.payload),
+      },
+    },
+    getConfig: {
+      type: 'better-promise',
+      async: () => apiClient.getConfig(),
+      result: {
+        configValues: { source: 'result.body', initial: {}, default: {} },
+      },
+    },
+    setConfig: {
+      type: 'better-promise',
+      async: ({ data }) => apiClient.setConfig(data),
     },
   },
 };

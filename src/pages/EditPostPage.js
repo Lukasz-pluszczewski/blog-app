@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
+import { post as postPropType } from 'constants/propTypes';
 import { getAction } from 'services/reduxBreeze';
 
 import Post from 'components/Post';
@@ -22,14 +23,7 @@ class EditPostPage extends Component {
     getPost: PropTypes.func,
     getPosts: PropTypes.func,
     editPost: PropTypes.func,
-    post: PropTypes.shape({
-      id: PropTypes.string,
-      title: PropTypes.string,
-      description: PropTypes.string,
-      tags: PropTypes.arrayOf(PropTypes.string),
-      content: PropTypes.string,
-      hidden: PropTypes.bool,
-    }),
+    post: postPropType,
   };
 
   componentDidMount() {

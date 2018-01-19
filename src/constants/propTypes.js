@@ -6,6 +6,8 @@ export const post = PropTypes.shape({
   tags: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.string), PropTypes.string]),
   description: PropTypes.string,
   content: PropTypes.string,
+  hidden: PropTypes.bool,
+  date: PropTypes.number,
 });
 
 export default PropTypes;

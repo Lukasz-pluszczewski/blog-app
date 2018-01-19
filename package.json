@@ -72,6 +72,7 @@
     "mocha": "^4.0.1",
     "moment": "^2.20.1",
     "node-sass": "^4.6.1",
+    "perfect-immutable": "^1.4.0",
     "postcss-loader": "^2.0.8",
     "prismjs": "^1.9.0",
     "prop-types": "^15.5.10",

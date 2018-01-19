@@ -43,6 +43,14 @@ const ApiClient = {
   login({ username, password }) {
     return request('post', 'login', { data: { username, password } });
   },
+
+  // config
+  getConfig() {
+    return request('get', 'config');
+  },
+  setConfig(data) {
+    return request('put', 'config', { data });
+  },
 };
 
 export default ApiClient;

@@ -10,10 +10,12 @@ class App extends Component {
   static propTypes = {
     children: PropTypes.element,
     setToken: PropTypes.func,
+    getConfig: PropTypes.func,
   };
 
   componentWillMount() {
     this.props.setToken(tokenService.loadAuth());
+    this.props.getConfig();
   }
 
   render() {
@@ -27,5 +29,6 @@ export default withRouter(connect(
   }),
   {
     setToken: getAction('setToken'),
+    getConfig: getAction('getConfig'),
   }
 )(App));
