@@ -19,12 +19,17 @@ class ReduxFormCodeMirror extends Component {
   }
 
   render() {
-    const { input, meta, ...rest } = this.props;
+    const { input, meta, options, ...rest } = this.props;
+    const codeMirrorOptions = {
+      lineWrapping: true,
+      ...options,
+    };
 
     return (
       <CodeMirror
         value={input.value}
         onBeforeChange={this.handleChange}
+        options={codeMirrorOptions}
         {...rest}
       />
     );

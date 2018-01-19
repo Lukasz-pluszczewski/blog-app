@@ -80,9 +80,13 @@ $max-page-width: 768px;
 .basePage {
   flex-grow: 1;
   max-width: $max-page-width;
+  @media (max-width: $max-page-width) {
+    max-width: 100vw;
+  }
 }
 .fullWidthPage {
   flex-grow: 1;
+  max-width: 100vw;
 }
 
 // typography

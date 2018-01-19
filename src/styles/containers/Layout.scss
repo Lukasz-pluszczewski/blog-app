@@ -6,15 +6,41 @@
   .Layout__topbar {
     display: flex;
     justify-content: space-between;
+    padding: $smallSpacing;
+    background-color: $black;
+    color: $white;
     .Layout__topbarLeft {
       display: flex;
       justify-content: flex-start;
+      align-items: center;
     }
     .Layout__topbarRight {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
+      text-align: right;
     }
 
+    .Layout__logo {
+      display: flex;
+      align-items: center;
+      .Layout__logoImage {
+        width: 50px;
+        margin: $smallSpacing;
+      }
+    }
+    .Layout__quote {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: $standardSpacing;
+      font-size: 0.75em;
+      .Layout__quoteQuote {
+        margin-top: 0;
+        font-family: inherit;
+        font-style: italic;
+      }
+    }
     .Layout__logoutIcon {
       margin: $standardSpacing;
       cursor: pointer;

@@ -1,18 +1,47 @@
 @import "../variables";
 
 .Post {
-  .Post__tags {
+  .Post__info {
     display: flex;
-    margin: $smallSpacing 0;
-    .Post__tag {
-      background-color: $accent;
-      padding: $tinySpacing $smallSpacing;
-      border-radius: $standardSpacing;
-      margin: 0 $tinySpacing;
-      font-size: 0.75em;
+    align-items: center;
+    font-size: 0.75em;
+    margin-top: $tinySpacing;
+    margin-bottom: $standardSpacing;
+    .Post__tags {
+      display: flex;
+      align-items: center;
+      margin-right: $smallSpacing;
+      .Post__tag {
+        padding: 0 $tinySpacing;
+        &:nth-last-child(n+2) { // selecting all but last
+          &:after {
+            content: ', ';
+          }
+        }
+      }
+      .Post__tagsIcon {
+        margin-right: $tinySpacing;
+      }
+    }
+    .Post__dateContainer {
+      display: flex;
+      align-items: center;
+      .Post__date {
+
+      }
+      .Post__dateIcon {
+        margin-right: $smallSpacing;
+      }
     }
   }
   .Post__description {
     font-style: italic;
+  }
+  .Post__content {
+    border-top: 1px solid $grey;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
   }
 }

@@ -5,6 +5,13 @@
   .PostsListPage__header {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-bottom: $largeSpacing;
+    .PostsListPage__logoContainer {
+      .PostListPage__logo {
+        height: 100px;
+      }
+    }
     .PostsListPage__addNewButton {
       margin-left: $standardSpacing;
     }

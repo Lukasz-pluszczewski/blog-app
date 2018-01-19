@@ -6,6 +6,7 @@
     padding: $smallSpacing;
   }
   .NewPostPage__preview {
+    @extend .fullWidthPage;
     padding: $smallSpacing;
   }
 }

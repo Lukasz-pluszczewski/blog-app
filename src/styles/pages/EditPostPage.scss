@@ -1,7 +1,7 @@
 @import "../variables";
 
 .EditPostPage {
-  @extend .fullWidthPage;
+  @extend .basePage;
   .EditPostPage__form {
     padding: $smallSpacing;
   }

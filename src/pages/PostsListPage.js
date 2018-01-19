@@ -10,6 +10,7 @@ import Icon from 'components/Icon';
 import Link from 'components/Link';
 import PostsList from 'components/PostsList';
 
+import logo from 'assets/philog-black.png';
 import 'styles/pages/PostsListPage.scss';
 
 class PostsListPage extends Component {
@@ -31,7 +32,9 @@ class PostsListPage extends Component {
       <Layout>
         <div className="PostsListPage">
           <div className="PostsListPage__header">
-            <h1>Philosophy blog</h1>
+            <div className="PostsListPage__logoContainer">
+              <img className="PostListPage__logo" src={logo} />
+            </div>
             <IsLoggedIn>
               <Link to="newpost">
                 <Icon className="PostsListPage__addNewButton" onClick={this.addNewPostRedirect} name="plus" />

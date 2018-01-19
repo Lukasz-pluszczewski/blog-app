@@ -17,6 +17,7 @@ class EditPostPage extends Component {
     content: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
+    hidden: PropTypes.bool,
     tags: PropTypes.string,
     getPost: PropTypes.func,
     getPosts: PropTypes.func,
@@ -27,6 +28,7 @@ class EditPostPage extends Component {
       description: PropTypes.string,
       tags: PropTypes.arrayOf(PropTypes.string),
       content: PropTypes.string,
+      hidden: PropTypes.bool,
     }),
   };
 
@@ -46,6 +48,7 @@ class EditPostPage extends Component {
           description: this.props.description,
           tags: this.props.tags.split(' '),
           content: this.props.content,
+          hidden: this.props.hidden,
         },
       },
       {
@@ -105,6 +108,7 @@ export default connect(
     tags: _.get(state, 'form.newPost.values.tags', ''),
     description: _.get(state, 'form.newPost.values.description', ''),
     content: _.get(state, 'form.newPost.values.content', ''),
+    hidden: _.get(state, 'form.newPost.values.hidden', ''),
     post: state.blog.post,
   }),
   {

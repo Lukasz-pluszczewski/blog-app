@@ -61,7 +61,7 @@ class PostPage extends Component {
                     />
                   </IsLoggedIn>
                 </div>
-                <Post post={post} hideTitle />
+                <Post post={post} hideTitle hideDescription />
               </div>
             )
           }

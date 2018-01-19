@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import { post as postPropType } from 'constants/propTypes';
 
+import Icon from 'components/Icon';
 import Markdown from 'components/Markdown';
 
 import 'styles/components/Post.scss';
@@ -23,6 +25,7 @@ class Post extends Component {
       if (postArr.length) {
         return (
           <div className="Post__tags">
+            <Icon className="Post__tagsIcon" name="tags" />
             {postArr.map(tag => tag
               ? (
                 <div className="Post__tag" key={tag}>
@@ -51,7 +54,15 @@ class Post extends Component {
               </h1>
             </div>
           )}
-          {hideTags || this.getTags()}
+          <div className="Post__info">
+            {hideTags || this.getTags()}
+            <div className="Post__dateContainer">
+              <Icon className="Post__dateIcon" name="clock-o"/>
+              <div className="Post__date">
+                { post && moment(post.date).format('DD-MM-YYYY') }
+              </div>
+            </div>
+          </div>
           {hideDescription || (
             <div className="Post__description">
               {post && post.description}

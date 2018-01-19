@@ -10,6 +10,7 @@ $normalCodeEditorPadding: $smallSpacing;
     box-shadow: inputShadow($primary);
     transition: box-shadow .2s;
     padding: $normalCodeEditorPadding;
+    height: 500px;
     &:focus {
       box-shadow: inputFocusShadow($primary);
     }

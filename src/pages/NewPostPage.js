@@ -17,6 +17,7 @@ class NewPostPage extends Component {
     content: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
+    hidden: PropTypes.bool,
     tags: PropTypes.string,
     addPost: PropTypes.func,
     getPosts: PropTypes.func,
@@ -29,6 +30,7 @@ class NewPostPage extends Component {
         description: this.props.description,
         tags: this.props.tags.split(' '),
         content: this.props.content,
+        hidden: this.props.hidden,
       },
       {
         success: () => {
@@ -73,6 +75,7 @@ export default connect(
     tags: _.get(state, 'form.newPost.values.tags', ''),
     description: _.get(state, 'form.newPost.values.description', ''),
     content: _.get(state, 'form.newPost.values.content', ''),
+    hidden: _.get(state, 'form.newPost.values.hidden', ''),
   }),
   {
     addPost: getAction('addPost'),
