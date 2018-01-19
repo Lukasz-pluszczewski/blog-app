@@ -1,4 +1,4 @@
-# Simple blog app!
+# [Philog](http://philog.pl)!
 
 #### Clone the project
 ```bash
