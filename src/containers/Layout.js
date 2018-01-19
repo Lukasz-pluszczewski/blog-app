@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import quote from 'constants/quotes';
 import { getAction } from 'services/reduxBreeze';
 
 import Link from 'components/Link';
