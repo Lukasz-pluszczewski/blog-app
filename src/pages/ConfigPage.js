@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import { connect } from 'redux-breeze';
 import _ from 'lodash';
 
-import { post as postPropType } from 'constants/propTypes';
 import { getAction } from 'services/reduxBreeze';
 
 import Input from 'components/Input';
-import Tabs from 'components/Tabs';
 import Layout from 'containers/Layout';
-import NewPostForm from 'components/NewPostForm';
 
 import 'styles/pages/ConfigPage.scss';
 
@@ -93,9 +90,9 @@ class EditPostPage extends Component {
 }
 
 export default connect(
-  state => ({
-    config: state.config.configValues,
-  }),
+  {
+    config: 'config.configValues',
+  },
   {
     getConfig: getAction('getConfig'),
     setConfig: getAction('setConfig'),

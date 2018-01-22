@@ -89,7 +89,7 @@
     "react-test-renderer": "^16.1.1",
     "redux": "^3.7.1",
     "redux-better-promise": "^0.1.3",
-    "redux-breeze": "^1.0.0",
+    "redux-breeze": "^2.0.2",
     "redux-breeze-plugin-better-promise": "^1.0.0",
     "redux-form": "^7.2.0",
     "redux-immutable-state-invariant": "^2.0.0",

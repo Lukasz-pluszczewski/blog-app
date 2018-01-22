@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import { connect } from 'redux-breeze';
 
 import { post as postPropType } from 'constants/propTypes';
 
@@ -39,9 +39,8 @@ class PostsList extends Component {
 }
 
 export default connect(
-  state => ({
-    posts: state.blog.posts,
-    pending: state.blog.pending.getPosts,
-  }),
-  {}
+  {
+    posts: 'blog.posts',
+    pending: 'blog.pending.getPosts',
+  }
 )(PostsList);

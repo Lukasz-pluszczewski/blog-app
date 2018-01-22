@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import { connect } from 'redux-breeze';
 import _ from 'lodash';
 
 import { post as postPropType } from 'constants/propTypes';
@@ -99,15 +99,15 @@ class EditPostPage extends Component {
 }
 
 export default connect(
-  state => ({
-    title: _.get(state, 'form.newPost.values.title', ''),
-    tags: _.get(state, 'form.newPost.values.tags', ''),
-    description: _.get(state, 'form.newPost.values.description', ''),
-    content: _.get(state, 'form.newPost.values.content', ''),
-    hidden: _.get(state, 'form.newPost.values.hidden', ''),
-    date: _.get(state, 'form.newPost.values.date', ''),
-    post: state.blog.post,
-  }),
+  {
+    title: 'form.newPost.values.title',
+    tags: 'form.newPost.values.tags',
+    description: 'form.newPost.values.description',
+    content: 'form.newPost.values.content',
+    hidden: 'form.newPost.values.hidden',
+    date: 'form.newPost.values.date',
+    post: 'blog.post',
+  },
   {
     getPost: getAction('getPost'),
     getPosts: getAction('getPosts'),
